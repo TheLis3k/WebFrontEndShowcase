@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lisek-dark: #1F1F1F;
+  --color-lisek-brown: #5C4742;
+  --color-lisek-light: #E5EBEA;
+  --color-lisek-orange: #FFA737;
+  --color-lisek-orange-dark: #DC851F;
+  --font-righteous: 'Righteous', cursive;
+  --font-anton: 'Anton', sans-serif;
+}
+
+body {
+  background-color: var(--color-lisek-dark);
+  color: var(--color-lisek-light);
+  overflow: hidden;
+}
+
+::selection {
+  background-color: var(--color-lisek-orange);
+  color: var(--color-lisek-dark);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1F1F1F; }
+::-webkit-scrollbar-thumb { background: #5C4742; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #DC851F; }
+
+#loader {
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+#next-section {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  transform: translateY(100vh);
+  transition: transform 0.45s cubic-bezier(0.2, 0, 0.1, 1);
+}
+
+#next-section.landed {
+  transform: translateY(0);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px color-mix(in srgb, var(--color-lisek-orange) 60%, transparent);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.comet-strike {
+  text-shadow: 0 0 50px var(--color-lisek-orange), 0 0 100px var(--color-lisek-orange), 0 0 150px #FFF !important;
+  transform: scale(1.2) translateY(-5px);
+  color: #FFF !important;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fly-away {
+  transform: translateY(-120vh) scale(0.9) !important;
+  opacity: 0 !important;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lantern-pulse {
+  0%   { opacity: 0.3; scale: 0.95; }
+  100% { opacity: 0.5; scale: 1.05; }
+}
+
+.lantern-active {
+  animation: lantern-pulse 4s infinite alternate ease-in-out;
+}
+
+@keyframes comet-rest {
+  0%   { transform: translate(-50%, -50%) translateY(0px);   box-shadow: 0 0 20px 10px rgba(255,167,55,0.9), 0 0 50px 25px rgba(220,133,31,0.5); }
+  100% { transform: translate(-50%, -50%) translateY(-6px);  box-shadow: 0 0 28px 14px rgba(255,167,55,1),   0 0 70px 35px rgba(220,133,31,0.7); }
+}
+
+.comet-rest {
+  animation: comet-rest 3s infinite alternate ease-in-out;
+}
