@@ -21,6 +21,12 @@ export const projects: Project[] = [
     live: "https://evenciki.pl",
   },
   {
+    name: "Restaurant Admin",
+    description: "Full-stack restaurant management system with a public reservation/menu site and a role-based admin panel. Features JWT auth with rotating refresh tokens and invitation-based onboarding.",
+    tech: ["React", "TypeScript", "Spring Boot", "PostgreSQL", "TanStack Query", "Zustand", "Docker"],
+    github: "https://github.com/TheLis3k/WizytowkaSandbox",
+  },
+  {
     name: "CreativeShape",
     description: "Marketing site for a Polish company selling NFC 3D-printed keychains linked to digital business cards. Features a drag-to-rotate 3D STL viewer and keychain catalogue.",
     tech: ["React", "TypeScript", "Vite", "CSS Custom Properties"],
