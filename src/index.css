@@ -6,6 +6,7 @@
   --color-lisek-light: #E5EBEA;
   --color-lisek-orange: #FFA737;
   --color-lisek-orange-dark: #DC851F;
+  --color-lisek-sand: #C9A87C;
   --font-righteous: 'Righteous', cursive;
   --font-anton: 'Anton', sans-serif;
 }
@@ -73,8 +74,8 @@ body {
 }
 
 @keyframes lantern-pulse {
-  0%   { opacity: 0.3; scale: 0.95; }
-  100% { opacity: 0.5; scale: 1.05; }
+  0%   { opacity: 0.15; scale: 0.95; }
+  100% { opacity: 0.25; scale: 1.05; }
 }
 
 .lantern-active {

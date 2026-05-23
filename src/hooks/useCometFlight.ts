@@ -42,11 +42,15 @@ export function useCometFlight(): FlightRefs {
   const coords = useRef<Coords | null>(null)
   const smoothPath = useRef<Point[]>([])
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null)
+  const isExiting = useRef(false)
+  const exitProgress = useRef(0)
+  const exitIncrement = useRef(0.055)
+  const exitListenerAdded = useRef(false)
 
   const triggerFlight = useCallback(() => {
     if (isFlying.current || hasFlown.current) return
     isFlying.current = true
-    if (scrollHintRef.current) scrollHintRef.current.style.opacity = '0'
+    if (scrollHintRef.current) scrollHintRef.current.style.display = 'none'
   }, [])
 
   useFlightInput({
@@ -132,6 +136,7 @@ export function useCometFlight(): FlightRefs {
           head.style.boxShadow = ''
           head.classList.add('comet-rest')
           trailCtx.clearRect(0, 0, trailCanvas.width, trailCanvas.height)
+          if (scrollHintRef.current) scrollHintRef.current.style.display = 'none'
         }
 
         if (isFlying.current && smoothPath.current.length) {
@@ -157,17 +162,84 @@ export function useCometFlight(): FlightRefs {
           }
 
           if (displayP > 0.85) {
-            lampGlow.style.opacity = String(((displayP - 0.85) / 0.15) * 0.5)
+            lampGlow.style.opacity = String(((displayP - 0.85) / 0.15) * 0.25)
           }
 
           if (displayP > 0.65) heroContent.classList.add('fly-away')
 
           if (displayP > 0.85 && !AboutMeTriggered.current) {
             AboutMeTriggered.current = true
-            document.getElementById('next-section')?.classList.add('landed')
+            const section = document.getElementById('next-section')
+            if (section) {
+              section.scrollTop = 0
+              section.classList.add('landed')
+            }
           }
 
           lastPos.current = pos
+        }
+      }
+
+      if (hasFlown.current && !exitListenerAdded.current) {
+        exitListenerAdded.current = true
+        const section = document.getElementById('next-section')
+        if (section) {
+          section.addEventListener('scroll', () => {
+            if (!isExiting.current && hasFlown.current) {
+              isExiting.current = true
+              exitProgress.current = 0
+              const startX = coords.current ? coords.current.endX : window.innerWidth / 2
+              const cLeft = Math.max(0, (window.innerWidth - 896) / 2)
+              const eX = Math.max(cLeft - 50, 10)
+              const dist = Math.abs(startX - eX)
+              exitIncrement.current = dist > 0 ? Math.max(1 / 15, 300 / dist / 60) : 0.055
+              lastPos.current = coords.current
+                ? { x: coords.current.endX, y: coords.current.endY }
+                : { x: window.innerWidth / 2, y: 70 }
+              head.classList.remove('comet-rest')
+              head.style.animation = 'none'
+              head.style.background = '#FFF'
+              head.style.boxShadow = '0 0 30px 15px rgba(255,167,55,0.8), 0 0 60px 30px rgba(220,133,31,0.4)'
+            }
+          }, { once: true })
+        }
+      }
+
+      if (isExiting.current) {
+        exitProgress.current += exitIncrement.current
+        const t = Math.min(exitProgress.current, 1)
+        const startX = coords.current ? coords.current.endX : window.innerWidth / 2
+        const startY = coords.current ? coords.current.endY : 70
+        const contentLeft = Math.max(0, (window.innerWidth - 896) / 2)
+        const endX = Math.max(contentLeft - 50, 10)
+        const endY = startY
+
+        const currentX = startX + (endX - startX) * t
+        const currentY = startY + (endY - startY) * t
+
+        const pos = { x: currentX, y: currentY }
+
+        trailCtx.globalCompositeOperation = 'destination-out'
+        trailCtx.fillStyle = 'rgba(0,0,0,0.15)'
+        trailCtx.fillRect(0, 0, trailCanvas.width, trailCanvas.height)
+        trailCtx.globalCompositeOperation = 'source-over'
+
+        if (lastPos.current && t < 1) drawTrailSegment(lastPos.current, pos)
+
+        head.style.left = `${currentX}px`
+        head.style.top = `${currentY}px`
+        lampGlow.style.left = `${currentX}px`
+        lampGlow.style.top = `${currentY}px`
+        lampGlow.style.transform = 'translate(-50%, -50%)'
+
+        lastPos.current = pos
+
+        if (t >= 1) {
+          isExiting.current = false
+          trailCtx.clearRect(0, 0, trailCanvas.width, trailCanvas.height)
+          head.style.background = '#FFD580'
+          head.style.boxShadow = ''
+          head.classList.add('comet-rest')
         }
       }
 

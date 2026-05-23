@@ -1,6 +1,7 @@
 import { useRef } from "react"
 import { GitHubIcon, LinkedInIcon, DiscordIcon, EmailIcon } from "./SocialIcons"
 import { useParticles } from "../hooks/useParticles"
+import Projects from "./Projects"
 import type { ComponentType } from "react"
 
 type Social = {
@@ -20,15 +21,13 @@ const socials: Social[] = [
   { label: "E-mail",   value: `${emailParts[0]}@${emailParts[1]}`, href: "",                                      Icon: EmailIcon    },
 ]
 
-const softSkills = ["Fast Learner", "Communication", "Problem Solving", "Analytical Thinking", "Teamwork", "Professional Yellow Duck", "Data Manipulation"]
+const softSkills = ["Fast Learner", "Communication", "Problem Solving", "Analytical Thinking", "Teamwork", "Professional Yellow Duck", "Data Manipulation", "Technical Communication Translator", "Kaizen"]
 
-const techSkills = ["JavaScript", "Java", "React", "Angular", "Spring Boot", "Linux", "Bash", "Playwright", "Python", "Automated Testing", "Git"]
+const techSkills = ["JavaScript", "Java", "React", "Angular", "Spring Boot", "Linux", "Bash", "Playwright", "Python", "Automated Testing", "Git", "Product Analytics", "Business Data Collection", "AI Agents / Skills / Rules"]
 
 const glassCard = {
-  background: `color-mix(in srgb, var(--color-lisek-brown) 10%, transparent)`,
-  backdropFilter: "blur(12px)",
-  WebkitBackdropFilter: "blur(12px)",
-  borderColor: `color-mix(in srgb, var(--color-lisek-brown) 25%, transparent)`,
+  background: `color-mix(in srgb, var(--color-lisek-brown) 18%, transparent)`,
+  borderColor: `color-mix(in srgb, var(--color-lisek-brown) 30%, transparent)`,
 }
 
 function onEnter(e: React.MouseEvent<HTMLElement>) {
@@ -75,9 +74,9 @@ export default function AboutMe() {
       id="next-section"
       className="w-full h-full flex flex-col items-center pt-32 overflow-y-auto"
       style={{
-        background: `radial-gradient(ellipse 70% 50% at 50% 0%, color-mix(in srgb, var(--color-lisek-orange) 15%, transparent) 0%, var(--color-lisek-dark) 70%)`,
-        maskImage: `linear-gradient(to bottom, transparent 0%, black 10%)`,
-        WebkitMaskImage: `linear-gradient(to bottom, transparent 0%, black 10%)`,
+        background: `radial-gradient(ellipse 60% 18% at 50% 0%, color-mix(in srgb, var(--color-lisek-orange) 5%, transparent) 0%, var(--color-lisek-dark) 100%)`,
+        maskImage: `linear-gradient(to bottom, transparent 0%, black 10%, black 88%, transparent 100%)`,
+        WebkitMaskImage: `linear-gradient(to bottom, transparent 0%, black 10%, black 88%, transparent 100%)`,
       }}
     >
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none opacity-40" />
@@ -159,6 +158,8 @@ export default function AboutMe() {
           Download CV — coming soon
         </button>
       </div>
+
+      <Projects />
     </section>
   )
 }
