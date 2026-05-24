@@ -27,6 +27,12 @@ export const projects: Project[] = [
     github: "https://github.com/TheLis3k/WizytowkaSandbox",
   },
   {
+    name: "How Much Is My Hot Wheels",
+    description: "Spring Boot REST API that scrapes eBay, Etsy, OLX, Vinted and the Hot Wheels Wiki to aggregate current valuations for die-cast collector cars.",
+    tech: ["Java 21", "Spring Boot", "MongoDB", "JSoup", "Playwright", "Docker"],
+    github: "https://github.com/TheLis3k/how-much-is-my-hot-wheels",
+  },
+  {
     name: "CreativeShape",
     description: "Marketing site for a Polish company selling NFC 3D-printed keychains linked to digital business cards. Features a drag-to-rotate 3D STL viewer and keychain catalogue.",
     tech: ["React", "TypeScript", "Vite", "CSS Custom Properties"],
