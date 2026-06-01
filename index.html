@@ -33,9 +33,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Righteous&display=swap" rel="stylesheet">
+
+    <!-- Structured data: machine-readable profile (no JS required) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ksawery",
+      "alternateName": "TheLis3k",
+      "url": "https://thelis3k.pl/",
+      "image": "https://thelis3k.pl/LogoTheLis3k.png",
+      "jobTitle": "Full-Stack Developer",
+      "description": "Full-stack developer who ships end to end — product framing, architecture, and frontend craft. Language-agnostic by choice.",
+      "worksFor": { "@type": "Organization", "name": "Talentech" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "PJATK (Polish-Japanese Academy of Information Technology)" },
+      "knowsAbout": [
+        "Full-Stack Development", "Product Engineering", "System Architecture",
+        "TypeScript", "JavaScript", "Java", "React", "Angular", "Spring Boot",
+        "NestJS", "SvelteKit", "PostgreSQL", "MongoDB", "Docker", "Linux",
+        "Bash", "Playwright", "Python", "Process Automation", "Product Analytics"
+      ],
+      "sameAs": [
+        "https://github.com/TheLis3k",
+        "https://www.linkedin.com/in/kc05",
+        "https://discord.com/users/thelis3k"
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Static fallback for crawlers and AI fetchers that don't run JavaScript -->
+    <noscript>
+      <h1>TheLis3k — Ksawery</h1>
+      <p>
+        Full-stack developer who ships end to end — from product framing and architecture
+        down to the last pixel. Language-agnostic by choice. Part-time IT student at PJATK
+        and developer at Talentech, working on the product Weekli and building automations
+        for client migrations and system integrations.
+      </p>
+      <p>
+        Tech: TypeScript, JavaScript, Java, React, Angular, Spring Boot, NestJS, SvelteKit,
+        PostgreSQL, MongoDB, Docker, Linux, Bash, Playwright, Python.
+      </p>
+      <p>
+        Selected work: Evenciki.pl (event-planning platform), a full-stack restaurant
+        management system with role-based auth, "How Much Is My Hot Wheels" (multi-source
+        scraping valuation API), and CreativeShape (NFC-keychain marketing site with a 3D
+        STL viewer).
+      </p>
+      <p>
+        AI-readable Markdown profile: <a href="/llms.txt">/llms.txt</a> ·
+        GitHub: <a href="https://github.com/TheLis3k">github.com/TheLis3k</a> ·
+        LinkedIn: <a href="https://www.linkedin.com/in/kc05">linkedin.com/in/kc05</a>
+      </p>
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

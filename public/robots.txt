@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# AI-readable Markdown version of this site
+# https://thelis3k.pl/llms.txt
+
+Sitemap: https://thelis3k.pl/sitemap.xml
