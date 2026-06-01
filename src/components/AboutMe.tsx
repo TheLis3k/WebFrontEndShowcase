@@ -145,18 +145,34 @@ export default function AboutMe() {
           })}
         </div>
 
-        {/* CV */}
-        <button
-          disabled
-          className="font-anton tracking-widest uppercase px-10 py-4 rounded-2xl border text-sm cursor-not-allowed select-none"
-          style={{
-            borderColor: `color-mix(in srgb, var(--color-lisek-brown) 30%, transparent)`,
-            background: `color-mix(in srgb, var(--color-lisek-brown) 8%, transparent)`,
-            color: `color-mix(in srgb, var(--color-lisek-brown) 60%, transparent)`,
-          }}
-        >
-          Download CV — coming soon
-        </button>
+        {/* CV + AI-readable Markdown */}
+        <div className="flex flex-wrap gap-4 justify-center">
+          <button
+            disabled
+            className="font-anton tracking-widest uppercase px-10 py-4 rounded-2xl border text-sm cursor-not-allowed select-none"
+            style={{
+              borderColor: `color-mix(in srgb, var(--color-lisek-brown) 30%, transparent)`,
+              background: `color-mix(in srgb, var(--color-lisek-brown) 8%, transparent)`,
+              color: `color-mix(in srgb, var(--color-lisek-brown) 60%, transparent)`,
+            }}
+          >
+            Download CV — coming soon
+          </button>
+          <a
+            href="/llms.txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="AI-readable Markdown version of this site"
+            className="font-anton tracking-widest uppercase px-10 py-4 rounded-2xl border text-sm transition-all duration-300 hover:scale-[1.03]"
+            style={{
+              borderColor: `color-mix(in srgb, var(--color-lisek-orange) 40%, transparent)`,
+              background: `color-mix(in srgb, var(--color-lisek-orange) 8%, transparent)`,
+              color: `var(--color-lisek-orange)`,
+            }}
+          >
+            View as .md ↗
+          </a>
+        </div>
       </div>
 
       <Projects />
