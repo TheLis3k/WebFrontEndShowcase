@@ -64,30 +64,112 @@
   <body>
     <div id="root"></div>
 
-    <!-- Static fallback for crawlers and AI fetchers that don't run JavaScript -->
+    <!--
+      Full profile in the raw HTML served at https://thelis3k.pl so any crawler or AI
+      fetcher reads it without running JavaScript. Wrapped in <noscript> so it stays out
+      of the way of the React app for human visitors. Mirrors /llms.txt.
+    -->
     <noscript>
-      <h1>TheLis3k — Ksawery</h1>
-      <p>
-        Full-stack developer who ships end to end — from product framing and architecture
-        down to the last pixel. Language-agnostic by choice. Part-time IT student at PJATK
-        and developer at Talentech, working on the product Weekli and building automations
-        for client migrations and system integrations.
-      </p>
-      <p>
-        Tech: TypeScript, JavaScript, Java, React, Angular, Spring Boot, NestJS, SvelteKit,
-        PostgreSQL, MongoDB, Docker, Linux, Bash, Playwright, Python.
-      </p>
-      <p>
-        Selected work: Evenciki.pl (event-planning platform), a full-stack restaurant
-        management system with role-based auth, "How Much Is My Hot Wheels" (multi-source
-        scraping valuation API), and CreativeShape (NFC-keychain marketing site with a 3D
-        STL viewer).
-      </p>
-      <p>
-        AI-readable Markdown profile: <a href="/llms.txt">/llms.txt</a> ·
-        GitHub: <a href="https://github.com/TheLis3k">github.com/TheLis3k</a> ·
-        LinkedIn: <a href="https://www.linkedin.com/in/kc05">linkedin.com/in/kc05</a>
-      </p>
+      <article>
+        <h1>TheLis3k — Ksawery</h1>
+        <p>
+          Full-stack developer who ships end to end — from product framing and architecture
+          down to the last pixel. Language-agnostic by choice: picks the right stack for the
+          problem instead of forcing the problem into a familiar stack.
+        </p>
+
+        <h2>Snapshot</h2>
+        <ul>
+          <li><strong>Role:</strong> Full-stack developer, automation engineer, product-minded builder.</li>
+          <li><strong>Currently:</strong> Part-time IT student at PJATK; developer at Talentech on the product Weekli.</li>
+          <li><strong>Operating principle:</strong> Clean architecture, SOLID, and shipping real value are the baseline — not the goal. Kaizen: leave every system better than he found it.</li>
+        </ul>
+
+        <h2>Why he's worth a conversation</h2>
+        <p>He sits in the rare overlap between three roles most people only do one of:</p>
+        <p>
+          <strong>As an engineer</strong> — Builds production systems solo, across the whole
+          stack: React/Angular frontends, Spring Boot and NestJS backends, PostgreSQL/MongoDB
+          data layers, Docker, CI, and the Bash/Playwright glue in between. Auth done right
+          (JWT with rotating refresh tokens, invitation-based onboarding), not auth done
+          "good enough." Learns the underlying model, not just the syntax.
+        </p>
+        <p>
+          <strong>As a tech lead</strong> — Thinks in systems, not tickets. At Talentech he
+          architects automation for client migrations, eliminates entire categories of manual
+          work, and drives integrations others wrote off as "too complex to automate."
+          Translates fuzzy business needs into concrete technical designs — and trade-offs
+          back into plain language stakeholders can decide on. Writes code the next developer
+          can read.
+        </p>
+        <p>
+          <strong>As a product manager</strong> — Builds things because they should exist,
+          then makes them usable. Mobile-first, bilingual UX, real onboarding flows,
+          design-agency finish on a one-person budget. Asks "should we build it, and what's
+          the smallest version that delivers value?" — not just "can we?"
+        </p>
+
+        <h2>Skills</h2>
+        <p>
+          <strong>Tech:</strong> JavaScript, TypeScript, Java, React, Angular, Spring Boot,
+          NestJS, SvelteKit, PostgreSQL, MongoDB, Drizzle ORM, Docker, Linux, Bash,
+          Playwright, Python, Automated Testing, Git, Vite, Product Analytics,
+          Business Data Collection, AI Agents / Skills / Rules.
+        </p>
+        <p>
+          <strong>Product &amp; lead:</strong> Requirements gathering, scoping to an MVP,
+          system integration design, process automation, technical-to-business translation,
+          mobile-first UX, bilingual (PL/EN) product delivery.
+        </p>
+        <p>
+          <strong>Soft:</strong> Fast learner, clear communicator, analytical problem solver,
+          strong teammate, relentless about continuous improvement (Kaizen).
+        </p>
+
+        <h2>Selected projects</h2>
+        <p>Each was designed, built, and shipped to production by one person.</p>
+        <ul>
+          <li>
+            <strong>Evenciki.pl</strong> — Event-planning platform: create an event, share a
+            link, collect attendee responses. Mobile-first, bilingual (PL/EN). SvelteKit 5,
+            NestJS, Drizzle ORM, PostgreSQL, TanStack Query, Tailwind, Bun.
+            <a href="https://evenciki.pl">https://evenciki.pl</a>
+          </li>
+          <li>
+            <strong>Restaurant Admin</strong> — Full-stack restaurant system: public
+            reservation/menu site plus a role-based admin panel, JWT auth with rotating
+            refresh tokens, invitation-based onboarding. React, TypeScript, Spring Boot,
+            PostgreSQL, TanStack Query, Zustand, Docker.
+            <a href="https://github.com/TheLis3k/WizytowkaSandbox">github.com/TheLis3k/WizytowkaSandbox</a>
+          </li>
+          <li>
+            <strong>How Much Is My Hot Wheels</strong> — Spring Boot REST API that scrapes
+            eBay, Etsy, OLX, Vinted, and the Hot Wheels Wiki in parallel to aggregate live
+            die-cast valuations. Java 21, Spring Boot, MongoDB, JSoup, Playwright, Docker.
+            <a href="https://github.com/TheLis3k/how-much-is-my-hot-wheels">github.com/TheLis3k/how-much-is-my-hot-wheels</a>
+          </li>
+          <li>
+            <strong>CreativeShape</strong> — Marketing site for a Polish NFC-keychain company,
+            including a drag-to-rotate 3D STL viewer and a full product catalogue. React,
+            TypeScript, Vite, CSS Custom Properties.
+            <a href="https://creativeshape.pl">https://creativeshape.pl</a>
+          </li>
+          <li>
+            <strong>WizytówkaWeb</strong> — This portfolio. The comet that flies through the
+            DOM is a hand-built canvas animation system following a 1,500-point Catmull-Rom
+            flight path. React 19, TypeScript, Tailwind CSS, Vite, Canvas API.
+            <a href="https://github.com/TheLis3k/WebFrontEndShowcase">github.com/TheLis3k/WebFrontEndShowcase</a>
+          </li>
+        </ul>
+
+        <h2>Links</h2>
+        <ul>
+          <li>AI-readable Markdown profile: <a href="/llms.txt">/llms.txt</a></li>
+          <li>GitHub: <a href="https://github.com/TheLis3k">github.com/TheLis3k</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/kc05">linkedin.com/in/kc05</a></li>
+          <li>Discord: <a href="https://discord.com/users/thelis3k">discord.com/users/thelis3k</a></li>
+        </ul>
+      </article>
     </noscript>
 
     <script type="module" src="/src/main.tsx"></script>
