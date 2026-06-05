@@ -81,7 +81,7 @@ export default function AboutMe() {
     >
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none opacity-40" />
       <div className="text-center z-10 w-full max-w-4xl px-6 pb-16">
-        <h2 className="font-righteous text-4xl md:text-6xl text-lisek-light mb-4">Hello there!</h2>
+        <h2 className="font-righteous text-4xl md:text-6xl text-lisek-light mb-4">Hi, I'm TheLis3k</h2>
         <p className="font-anton text-xl text-lisek-brown tracking-widest uppercase mb-16">
           ABOUT ME
         </p>
@@ -89,7 +89,7 @@ export default function AboutMe() {
         {/* Bio */}
         <div className="mb-5 px-8 py-6 rounded-2xl border text-left" style={glassCard}>
           <p className="font-righteous text-lisek-light text-base md:text-lg leading-relaxed">
-            I'm a part-time IT student at{" "}
+            I'm <strong className="text-lisek-orange">TheLis3k</strong> (Ksawery) — a part-time IT student at{" "}
             <a href="https://www.linkedin.com/school/pjatk" target="_blank" rel="noopener noreferrer" className="text-lisek-orange hover:underline">PJATK</a>{" "}
             and a passionate programmer.
             I work at{" "}

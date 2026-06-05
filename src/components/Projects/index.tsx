@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section className="w-full max-w-4xl px-6 pb-24 pt-16">
       <div className="text-center mb-10">
-        <h2 className="font-righteous text-4xl md:text-6xl text-lisek-light mb-4">My Work</h2>
+        <h2 className="font-righteous text-4xl md:text-6xl text-lisek-light mb-4">TheLis3k's Projects</h2>
         <p className="font-anton text-xl text-lisek-brown tracking-widest uppercase">PROJECTS</p>
       </div>
 

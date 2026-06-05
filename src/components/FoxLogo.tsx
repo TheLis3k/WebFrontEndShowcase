@@ -1,6 +1,7 @@
 export default function FoxLogo() {
   return (
-    <svg viewBox="0 0 200 200" className="w-32 h-32 md:w-48 md:h-48 drop-shadow-[0_0_15px_rgba(220,133,31,0.3)]">
+    <svg viewBox="0 0 200 200" className="w-32 h-32 md:w-48 md:h-48 drop-shadow-[0_0_15px_rgba(220,133,31,0.3)]" role="img" aria-label="TheLis3k Logo">
+      <title>TheLis3k Logo</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
