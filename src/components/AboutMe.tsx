@@ -146,7 +146,7 @@ export default function AboutMe() {
         </div>
 
         {/* CV + AI-readable Markdown */}
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <button
             disabled
             className="font-anton tracking-widest uppercase px-10 py-4 rounded-2xl border text-sm cursor-not-allowed select-none"
