@@ -65,7 +65,7 @@ function SkillBadge({ label, orange = false }: { label: string; orange?: boolean
   )
 }
 
-export default function AboutMe() {
+export default function AboutMe({ onOpenCV }: { onOpenCV: () => void }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   useParticles(canvasRef)
 
@@ -148,15 +148,15 @@ export default function AboutMe() {
         {/* CV + AI-readable Markdown */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <button
-            disabled
-            className="font-anton tracking-widest uppercase px-10 py-4 rounded-2xl border text-sm cursor-not-allowed select-none"
+            onClick={onOpenCV}
+            className="font-anton tracking-widest uppercase px-10 py-4 rounded-2xl border text-sm transition-all duration-300 hover:scale-[1.03]"
             style={{
-              borderColor: `color-mix(in srgb, var(--color-lisek-brown) 30%, transparent)`,
-              background: `color-mix(in srgb, var(--color-lisek-brown) 8%, transparent)`,
-              color: `color-mix(in srgb, var(--color-lisek-brown) 60%, transparent)`,
+              borderColor: `color-mix(in srgb, var(--color-lisek-orange) 40%, transparent)`,
+              background: `color-mix(in srgb, var(--color-lisek-orange) 8%, transparent)`,
+              color: `var(--color-lisek-orange)`,
             }}
           >
-            Download CV — coming soon
+            View CV / Download PDF
           </button>
           <a
             href="/llms.txt"
