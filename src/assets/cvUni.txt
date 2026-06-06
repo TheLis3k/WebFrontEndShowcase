@@ -1,0 +1,103 @@
+Wykształcenie:
+
+    Inżynier
+    Polsko-Japońska Akademia Technik Informatycznych w Gdańsku Weekendowo
+    Okres: 2024 - Aktualne
+    Umiejętności: Prezentacja, Praca zespołowa, Analityczne i Logiczne myślenie, Zaawansowane zarządaznie dokumentacją, Zaawansowane programowanie, Umiejętność efektywnego przyswajania wiedzy, Analiza matematyczna, Algorytmy, Zaawansowane zarządzanie sieciami. 
+    Info: Jestem członkiem samorządu, zajmuję się pomocą organizacji eventów uczelnianych, udzielam się w planowaniach budżetu, jestem członkiem koła naukowego PJATK{AI}, pomagam kolegą zrozumieć funkcjonalności narzędi AI dla developerów, Agentic-Repo's, LLM w czatach AI, podstawami działania AI. Udzielam się też w dyskusjach ma temat kosztów AI, ile się wydaje na co, co się opłaca, a gdzie AI jest zbędne. Dodatoko przed sesjami organizuje dodatkowe wykłady dla znajomych z naszej grupy.
+
+    Technik
+    Technikum informatyczne - Zespół Szkół Energetycznych w Gdańsku 
+    Okres: 2019 - 2024
+    Umiejętności: Obsługa pakietu Microsoft Office, Zaawansowana Obsługa komputerów, Budowa komputerów, Zarządzanie sieciami, Programowanie, Zarządzanie bazami danych, Zaawansowana znajomość systemów Windows i Linux.
+
+Projekty:
+
+    CreativeShape - https://creativeshape.pl
+    Okres: 2026 - Teraz
+    Umiejętności: React, Svelte, Drizzle, Tailwind CSS, Claude, SEO, MetaTags, Vercel
+    Opis: Aktualnie prowadzony start-up ze znajomym, gadżety z NFC do E-Wizytówek, znajomy zajmuje się produktem fizycznym, ja odpowiadam za wszystko co online, zbudowałem landing page jako naszą wizytówke spiętą z brelokami, zrobiłem SEO pod marke osobistą, dodałem meta tagi dla naszej strony głównej i podwizytówek na https://creativeshape.pl/w/*, aktualnie tworze menager wizytówek (CMS) do łatwego tworzenia i edytowania nowych wizytówek przez zespół produktu fizycznego, duży nacisk tutaj na kolaboracje z osobą mało informatyczną, tłumaczenie pojęć sieciowych, planowanie infrastruktury pod nasz produkt, przedstawienie wymagań, możliwości i deadline'ów dla znajomego mającemo małe pojęcie o aplikacjach webowych, wizytówkach itd.
+
+    Evenciki.pl - https://evenciki.pl 
+    Okres: 2026
+    Umiejętności: Svelte, TS, BunJS, Nix, Husky, Drizzle ORM, shadcn, TanStack Query, Tailwind CSS, Claude, Dockploy
+    Opis: Strona do organizacji imprez którą zrobiłem ze znajomymi ze studiów, Full-Stack w Svelte monorepo, zrobiona w jeden księżyc, zajmowałem się podczas procesu motywowaniem zespołu, planowaniem marki i zakresu aplikacji, planowałem też out of scope aby dociągnąć MVP w jak najkrótszym czasie
+
+    Wizytówka - https://thelis3k.pl https://github.com/TheLis3k/WebFrontEndShowcase
+    Okres: 2026
+    Umiejętności: React, Vite, TypeScript, Tailwind CSS, Math, RWD, Claude, SEO, MetaTags, AI crawler supprot, Vercel
+    Opis: Moja wizytówka, skupiałem się na theme, itegracji z AI czytającymi strone, fajnych animacjach itd. lepiej zobaczyć na własne oczy
+
+    RestaurantAdmin - https://github.com/TheLis3k/WizytowkaSandbox
+    Okres: 2026
+    Umiejętności: React 18, Vite, TypeScript, TanStack Query, Zustand, shadcn/ui, Spring Boot, Spring Security, JPA/Hibernate, PostgreSQL, Docker Compose, RWD, Claude
+    Opis: Full stack aplikacja do zarzązdzania restuaracją, z zarządaniem tokenami autoryzacyjnymi dla panelu administratora, wysyłką maili, pełnym frontendem dla klienta i admina, zrobiłem ją bo denerwowało mnie że moja lokalna pizzeria nie ma strony z menu tylko stare zdjęcie wizytówki na FB, więcej info na github
+
+    RyboKalulator - https://github.com/TheLis3k/RyboKalkulator
+    Okres: 2025
+    Umiejętności: Flutter, Dart, NoSQL DB, C++
+    Opis: Prosta aplikacja na telefon z trzema widokami, zrobiłem dla znajomego który pracuje w barze rybnym i potrzebował prostego sposobu na lcizenie ceny za ryby, apka posiada mozliwosc dodawania ryb, zdjęć i nazw w 3 różnych językach, posiada prosty i intuicyjny interfejs który sprawdził się w obfitym sezonie, stawiałem na lekkość i szybkość apki bo miała działać na starym telefonie ~1GB ram i 64GB pamięci z starym prockiem
+
+    003-Expense-Tracker - https://github.com/TheLis3k/003-Expense-Tracker
+    Okres: 2025
+    Umiejętności: React, JS, CSS, ChartJS, RWD
+    Opis: Pierwszy projekt frontendowy z użyciem react, chciałem się pobawić wykresami i nauczyć reacta, operacje na liczbach i display za pomocą ChartJS, prosty api call po waluty i rewalutyzacje
+
+    how-much-is-my-hot-wheels - https://github.com/TheLis3k/how-much-is-my-hot-wheels
+    Okres: 2024
+    Umiejętności: Java, MongoDB, Playwrightm JSoup, Docker, Spring boot, Async Java
+    Opis: Pierwszy projekt w javie, zrobiłem go bo ciekawiło mnie ile kosztuje moja kolekcja hw, wiedzialem ze sie ceny różnią między platformami więc chciałem mieć wszystko w jednym miejscu, projekt fanowski, pierwszy plan to było api publiczne tych platform, ale było ciężko się do niektóych dostać więc za pomocą playwright i jsoup zrobiłem scrapery które sprawdzały to co potrzebuje, może już nie działać ze względu na update frontu których kolwiek ze stron
+
+    Administracja Bazą Danych FiveM
+    Okres: 2017-2018
+    Umiejętności: MySQL, Excel, XML, phpmyadmin, Discord Ticket System
+    Opis: Projekt ze znajomymi, stworzyliśmy serwer na emulatorze gry GTA 5, zajmowałem się obsługą bazy danych w SQL i wprowadzaniem modyfikacji. Zajmowałem się też zgłoszeniami o błędach w bazach danych i projektowaniem prostych zapytań.
+
+Doświadczenie zawodowe:
+
+Talentech - Technical Implementation Specialist
+Okres: 2025 - Aktualne +7 miesięcy
+Umiejętności: Automatyzacja implementacji, Automatyzacja Procesów, Integracje systemów, Migracja klientów, Playwright, Cypress, Python, Tworzenie Agentic Repo, Fine Tuning AI, React, Angular, Java, Spring Boot, C#, .NET, Git, Bash, Azure DevOps, CI/CD, E2E, Pipeline
+Opis: Automatyzacja manualnego procesu implementacji nowego produktu dla klientów, Testy penetracyjne funkcjonalności AI aplikacji i wprowadzenie poprawek do znalezionych problemów, Tworzenie integracji między naszymi aplikacjami a zewnętrzymi aplikacjami klientów, Migracja widoków aplikacji z Angular na React, Tworzenie nowych widoków aplikacji i zaawansowanej logiki tłumaczeń Java+Angular, Prowadzenie warsztatu dla zespołu z wykorzystywania Agentic AI (Skille, Zasady, Sub-Agenty, Multi-Repo), Migracja testów E2E z cypress do playwright z wykorzystaniem agentów AI, Debugowanie back-endu Java Spring Boot, Planowanie sprintów, Prowadzenie daily, Stworzenie Agentic-Repo do automatyzacji procesu tworzenia sryptów automatyzacji, Implementacja stron internetowych przez CMS, Utrzymywanie relacji z klientem, Rozwiązywanie problemów klientów, Tłumaczenie języka technicznego na ludzki 
+
+Exorigo-Upos - Mobilny Technik Serwisu
+Okres: 2025 - 2025 3 miesiące
+Umiejętności: Zarządzanie systemem zgłoszeń, rozwiązywanie problemów peryferiów i aplikacji komputerowych przez telefon i na miejscu, Obsługa Microsoft Office, Zstosowanie procedór i procesów, Tworzenie brakujących instrukcji dla konfiguracji i użytkowania sprzętem, osiąganie pozytywnych wyników KPI, Optymalizacja procesów, Linux, Bash
+Opis: Obsługiwanie zgłoszeń awarii aplikacji i sprzętu informatycznego, próba naprawy poprzez instruktarz telefoniczny, w przypadku niepowodzenia wyjazd na miejsce i naprawa sprzętu. Stosowanie się do osobnych procedur dla każdego klienta, tworzenie dokumentacji przebiegu naprawy, optymalizacja procesów zarządzania magazynem serwisu, szkolenie współpracowników z procedur.
+
+Amrest - Kierownik Produktu
+Okres: 2024-2025  6 miesięcy
+Umiejętnośći: Analiza Wykresów i Tabel, Składanie zamówień, Organizacja struktury magazynowej, Zarządaznie magazynami, Dbanie o jakość produktu, Zapewnianie ciągłości produkcji, Dbanie o Bezpieczeństwo żywności, kontrola BHP, zarządzanie zespołem do 12 osób, Dbanie o zadowolenie klienta, Rozwiązywanie problemów klientów bądź członków zespołów, Dbanie o dobre imie firmy, osiąganie pozytywnych wyników KPI, Delegowanie obowiązków, Optymalizacja procesów, Mentoring
+Opis: Prowadzenie zmiany poprzez zarządzanie produktem i zespołem, składanie zamówień w oparciu o dane z tabel i wykresów celem minimalizacji strat i maksymalizacji zysków, zarządzanie przestrzenią magazynową, Dbanie o przestrzeganie przepisów BHP celem przejścia audytu BHP, Dbanie o przestrzeganie przepisów Bezpieczeństwa żywności celem przejścia audytu FSCC, zarządzanie produkcją celem maksymalizacji wyników KPI takich jak COS, wprowadzanie nowych procedur celem poprawy jakości produktu, Mentoring zespołu celem przedstawienia nowych produktów procedów, bądź wdrażanie nowych osób.
+
+thyssenkrupp - Staż Analityk Danych
+Okres: 2021-2021 2 miesiące
+Umiejętności: PHP, SQL, PowerBI, Excel, Microsoft Office, Wizualizacja danych, Tworzenie wykresów i tabel,
+Opis: Przedstawianie dużych zbiorów danych w czytelnych i przejżystych, wykresach i tabelach. Operacje na zbiorach danych, przekształcanie tabel i baz danych celem przedstawiania wyników firmy. Tworzenie zapytań SQL.
+
+MaxCon - Staż Informatyk-Sprzedawca
+Okres: 2023-2023 2 miesiące
+Umiejętności: Obsługa klienta, Przedstawianie produktów, Naprawa urządzeń informatycznych, Konfiguracja urządzeń informatycznych, Zarządzanie przesyłkami.
+Opis: Obługiwanie klienta poprzez doradztwo na temat sprzętu informatycznego, zarządzanie przesyłkami poprzez odbieranie, magazynowanie i wysyłanie przesyłek, kompletowanie zamówień, naprawa, konfiguracja i testowanie urządzeń IoT.
+
+Plac Zabaw Pingwiny - Asystent Kierownika Placu
+Okres: 2021-2024 9 miesięcy praca sezonowa
+Umiejętności: Obsługa klienta, Doradztwo klienta, Dbanie o czystość i funkcjonalność placu, Rozwiązywanie sporów pracowniczych, Rozwiązywanie problemów klientów, Obsługa urządzeń elektrycznych, Naprawa urządzeń elektrycznych, Konfiguracja urządzeń elektrycznych, Zarządzanie zespołem do 10 osób, Nauka nowych osób
+Opis: Pilnowanie sprawności placu, Dbanie o porządek na placu, Delegowanie obowiązków, Obsługiwanie klienta jednocześnie dbając o jego satysfakcje, Naprawianie i konfiguracja urządzeń elektrycznych, Rozwiązywanie problemów klienta poprzez rozwiązywanie problemów i zaspokojanie jego emocji celem naprawy jego opini o naszym placu, Wdrażanie nowych pracowników w życie firmy, Szkolenie z obsługi atrakcji.
+
+Kontakt:
+Nr. tel.: +48 725 105 656
+e-mail: ksawery2k19@gmail.com
+LinkedIn: https://www.linkedin.com/in/kc05
+GitHub: https://github.com/TheLis3k
+
+Moja strona: https://thelis3k.pl
+
+Języki:
+Polski - C2 (Język ojczysty)
+Angielski - C1 (Znajomość na poziomie komunikatywnym, pozwalająca na czytanie dokumentacji)
+Niemiecki - B1 (Zanomość podstawowa, zrozumienie prostych zdań i podstawowych słów)
+
+Dodatkowe:
+Prawo jazdy kat. B
+Certyfikat: technik-informatyk-351203
