@@ -201,6 +201,10 @@ Each was designed, built, and shipped (or open-sourced) by one person unless not
   shipped schema modifications.
   Tech: MySQL, Excel, XML, phpMyAdmin.
 
+## Outside work
+
+After hours he builds his own projects — currently running the CreativeShape start-up and developing more side-projects. He's a member of the PJATK{AI} science club, where he shares knowledge about AI tooling for developers, Agentic Repos, and LLMs. He regularly organises informal workshops and study sessions for university friends — he enjoys breaking down complex things into plain language. Reads mainly psychology, self-improvement, and productivity. To reset: gym, pool, and kayaking.
+
 ## Languages
 
 - Polish -- C2 (native)

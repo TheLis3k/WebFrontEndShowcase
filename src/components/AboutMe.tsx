@@ -23,7 +23,7 @@ const socials: Social[] = [
 
 const softSkills = ["Fast Learner", "Communication", "Problem Solving", "Analytical Thinking", "Teamwork", "Professional Yellow Duck", "Data Manipulation", "Technical Communication Translator", "Kaizen"]
 
-const techSkills = ["JavaScript", "Java", "React", "Angular", "Spring Boot", "Linux", "Bash", "Playwright", "Python", "Automated Testing", "Git", "Product Analytics", "Business Data Collection", "AI Agents / Skills / Rules"]
+const techSkills = ["TypeScript", "JavaScript", "Java", "React", "Angular", "Spring Boot", "SvelteKit", "Docker", "Linux", "Bash", "Playwright", "Cypress", "Python", "CI/CD", "Azure DevOps", "Git", "Product Analytics", "Business Data Collection", "AI Agents / Skills / Rules"]
 
 const glassCard = {
   background: `color-mix(in srgb, var(--color-lisek-brown) 18%, transparent)`,
@@ -91,13 +91,15 @@ export default function AboutMe({ onOpenCV }: { onOpenCV: () => void }) {
           <p className="font-righteous text-lisek-light text-base md:text-lg leading-relaxed">
             I'm <strong className="text-lisek-orange">TheLis3k</strong> (Ksawery) — a part-time IT student at{" "}
             <a href="https://www.linkedin.com/school/pjatk" target="_blank" rel="noopener noreferrer" className="text-lisek-orange hover:underline">PJATK</a>{" "}
-            and a passionate programmer.
-            I work at{" "}
-            <a href="https://www.linkedin.com/company/talentech-group-site" target="_blank" rel="noopener noreferrer" className="text-lisek-orange hover:underline">Talentech</a>,
-            where I develop the product{" "}
+            and a full-stack developer who ships end to end.
+            At{" "}
+            <a href="https://www.linkedin.com/company/talentech-group-site" target="_blank" rel="noopener noreferrer" className="text-lisek-orange hover:underline">Talentech</a>{" "}
+            I build automations for client migrations, develop{" "}
             <a href="https://talentech.com/products/hr-system/employee-feedback/features/" target="_blank" rel="noopener noreferrer" className="text-lisek-orange hover:underline">Weekli</a>,
-            and across the company I build automations
-            for client migrations, automate internal processes, and help with system integrations.
+            and run internal workshops on Agentic AI.
+            After hours I co-run the{" "}
+            <a href="https://creativeshape.pl" target="_blank" rel="noopener noreferrer" className="text-lisek-orange hover:underline">CreativeShape</a>{" "}
+            start-up, build side-projects, and share AI tooling knowledge in the PJATK{"{AI}"} science club.
           </p>
         </div>
 
@@ -156,7 +158,7 @@ export default function AboutMe({ onOpenCV }: { onOpenCV: () => void }) {
               color: `var(--color-lisek-orange)`,
             }}
           >
-            View CV / Download PDF
+            View CV
           </button>
           <a
             href="/llms.txt"

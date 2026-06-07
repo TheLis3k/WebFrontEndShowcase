@@ -1,4 +1,8 @@
 import { useEffect } from "react"
+import {
+  Document, Packer, Paragraph, TextRun, HeadingLevel,
+  AlignmentType, BorderStyle, ShadingType,
+} from "docx"
 
 function buildPrintHTML(): string {
   const orange = "#b45309"
@@ -115,6 +119,8 @@ function buildPrintHTML(): string {
       <div style="font-size:10px;margin-bottom:4px">
         ${[["Polish","C2 — Native"],["English","C1 — Fluent"],["German","B1 — Basic"]].map(([l,v]) => `<div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="color:${dark}">${l}</span><span style="color:${muted}">${v}</span></div>`).join("")}
       </div>
+      ${heading("Outside Work")}
+      <div style="font-size:10px;color:#374151;line-height:1.5">After hours he builds his own projects — currently running CreativeShape and developing more side-projects. Member of the PJATK{AI} science club; shares knowledge about AI tooling, Agentic Repos, and LLMs. Regularly organises informal workshops for university friends. Reads psychology, self-improvement, and productivity. To reset: gym, pool, kayaking.</div>
       ${heading("Other")}
       <div style="font-size:10px;color:${dark}">Driver's licence — cat. B<br>Cert: technik-informatyk-351203</div>
     </div>
@@ -291,6 +297,169 @@ function SectionHeading({ children }: { children: string }) {
   )
 }
 
+function sectionHeading(text: string): Paragraph {
+  return new Paragraph({
+    text: text.toUpperCase(),
+    heading: HeadingLevel.HEADING_2,
+    spacing: { before: 240, after: 80 },
+    border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: "5C4742", space: 4 } },
+    shading: { type: ShadingType.CLEAR, fill: "FFFFFF" },
+  })
+}
+
+function bullet(text: string): Paragraph {
+  return new Paragraph({
+    children: [new TextRun({ text: `• ${text}`, size: 20, font: "Calibri", color: "1F1F1F" })],
+    spacing: { before: 40, after: 40 },
+    indent: { left: 240 },
+  })
+}
+
+function labelValue(label: string, value: string): Paragraph {
+  return new Paragraph({
+    children: [
+      new TextRun({ text: `${label}: `, bold: true, size: 20, font: "Calibri", color: "1F1F1F" }),
+      new TextRun({ text: value, size: 20, font: "Calibri", color: "1F1F1F" }),
+    ],
+    spacing: { before: 40, after: 40 },
+  })
+}
+
+async function buildDocx() {
+  const doc = new Document({
+    styles: {
+      default: {
+        document: { run: { font: "Calibri", size: 20, color: "1F1F1F" } },
+      },
+      paragraphStyles: [
+        {
+          id: "Heading2",
+          name: "Heading 2",
+          basedOn: "Normal",
+          run: { bold: true, size: 22, color: "5C4742", font: "Calibri" },
+        },
+      ],
+    },
+    sections: [{
+      properties: { page: { margin: { top: 720, bottom: 720, left: 900, right: 900 } } },
+      children: [
+        // Name & title
+        new Paragraph({
+          children: [new TextRun({ text: "Ksawery Chabowski", bold: true, size: 52, font: "Calibri", color: "1F1F1F" })],
+          alignment: AlignmentType.LEFT,
+          spacing: { after: 60 },
+        }),
+        new Paragraph({
+          children: [new TextRun({ text: "Full-Stack Developer · Automation Engineer", size: 24, font: "Calibri", color: "5C4742" })],
+          spacing: { after: 60 },
+        }),
+        new Paragraph({
+          children: [new TextRun({ text: `${email}  ·  thelis3k.pl  ·  github.com/TheLis3k  ·  linkedin.com/in/kc05`, size: 18, font: "Calibri", color: "5C4742" })],
+          spacing: { after: 200 },
+        }),
+
+        // Experience
+        sectionHeading("Experience"),
+        ...experience.flatMap(exp => [
+          new Paragraph({
+            children: [
+              new TextRun({ text: exp.role, bold: true, size: 22, font: "Calibri", color: "1F1F1F" }),
+              new TextRun({ text: `  —  ${exp.company}`, size: 22, font: "Calibri", color: "5C4742" }),
+              new TextRun({ text: `  |  ${exp.period}  (${exp.duration})`, size: 18, font: "Calibri", color: "888888" }),
+            ],
+            spacing: { before: 160, after: 60 },
+          }),
+          ...exp.bullets.map(b => bullet(b)),
+          new Paragraph({
+            children: [new TextRun({ text: exp.skills.join("  ·  "), size: 18, font: "Calibri", color: "888888", italics: true })],
+            spacing: { before: 60, after: 100 },
+          }),
+        ]),
+
+        // Projects
+        sectionHeading("Selected Projects"),
+        ...projects.flatMap(p => [
+          new Paragraph({
+            children: [
+              new TextRun({ text: p.name, bold: true, size: 22, font: "Calibri", color: "1F1F1F" }),
+              new TextRun({ text: `  |  ${p.period}`, size: 18, font: "Calibri", color: "888888" }),
+            ],
+            spacing: { before: 160, after: 40 },
+          }),
+          new Paragraph({
+            children: [new TextRun({ text: p.desc, size: 20, font: "Calibri", color: "1F1F1F" })],
+            spacing: { after: 40 },
+          }),
+          new Paragraph({
+            children: [new TextRun({ text: `${p.tech}  ·  ${p.url}`, size: 18, font: "Calibri", color: "888888", italics: true })],
+            spacing: { after: 100 },
+          }),
+        ]),
+
+        // Skills
+        sectionHeading("Tech Skills"),
+        new Paragraph({
+          children: [new TextRun({ text: techSkills.join("  ·  "), size: 20, font: "Calibri", color: "1F1F1F" })],
+          spacing: { after: 100 },
+        }),
+        sectionHeading("Soft Skills"),
+        new Paragraph({
+          children: [new TextRun({ text: softSkills.join("  ·  "), size: 20, font: "Calibri", color: "1F1F1F" })],
+          spacing: { after: 100 },
+        }),
+
+        // Education
+        sectionHeading("Education"),
+        ...education.flatMap(ed => [
+          new Paragraph({
+            children: [new TextRun({ text: ed.degree, bold: true, size: 22, font: "Calibri", color: "1F1F1F" })],
+            spacing: { before: 120, after: 40 },
+          }),
+          new Paragraph({
+            children: [new TextRun({ text: `${ed.school}  ·  ${ed.location}  ·  ${ed.period}`, size: 20, font: "Calibri", color: "5C4742" })],
+            spacing: { after: 40 },
+          }),
+          ...(ed.extra ? [new Paragraph({
+            children: [new TextRun({ text: ed.extra, size: 18, font: "Calibri", color: "888888", italics: true })],
+            spacing: { after: 80 },
+          })] : []),
+        ]),
+
+        // Languages
+        sectionHeading("Languages"),
+        labelValue("Polish",  "C2 — Native"),
+        labelValue("English", "C1 — Fluent"),
+        labelValue("German",  "B1 — Basic"),
+
+        // Outside Work
+        sectionHeading("Outside Work"),
+        new Paragraph({
+          children: [new TextRun({ text: "After hours he builds his own projects — currently running CreativeShape and developing more side-projects. Member of the PJATK{AI} science club; shares knowledge about AI tooling, Agentic Repos, and LLMs. Regularly organises informal workshops for university friends. Reads psychology, self-improvement, and productivity. To reset: gym, pool, kayaking.", size: 20, font: "Calibri", color: "1F1F1F" })],
+          spacing: { after: 100 },
+        }),
+
+        // Other
+        sectionHeading("Other"),
+        labelValue("Driver's licence", "cat. B"),
+        labelValue("Certification", "technik-informatyk-351203"),
+      ],
+    }],
+  })
+
+  return doc
+}
+
+async function handleDocx() {
+  const doc = await buildDocx()
+  const blob = await Packer.toBlob(doc)
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement("a")
+  a.href = url
+  a.download = "Ksawery_Chabowski_CV.docx"
+  a.click()
+  URL.revokeObjectURL(url)
+}
+
 function handlePrint() {
   const win = window.open("", "_blank")
   if (!win) { alert("Allow pop-ups to download the CV"); return }
@@ -333,17 +502,30 @@ export default function CVPage({ onClose }: Props) {
         <span className="font-righteous text-sm" style={{ color: `var(--color-lisek-orange)` }}>
           Ksawery Chabowski — CV
         </span>
-        <button
-          onClick={handlePrint}
-          className="font-anton tracking-widest uppercase text-sm px-5 py-2 rounded-xl border transition-all hover:scale-[1.03]"
-          style={{
-            borderColor: `color-mix(in srgb, var(--color-lisek-orange) 50%, transparent)`,
-            background: `color-mix(in srgb, var(--color-lisek-orange) 10%, transparent)`,
-            color: `var(--color-lisek-orange)`,
-          }}
-        >
-          Download PDF ↓
-        </button>
+        <div className="flex gap-2">
+          <button
+            onClick={handleDocx}
+            className="font-anton tracking-widest uppercase text-sm px-5 py-2 rounded-xl border transition-all hover:scale-[1.03]"
+            style={{
+              borderColor: `color-mix(in srgb, var(--color-lisek-brown) 50%, transparent)`,
+              background: `color-mix(in srgb, var(--color-lisek-brown) 10%, transparent)`,
+              color: `var(--color-lisek-light)`,
+            }}
+          >
+            ATS .docx ↓
+          </button>
+          <button
+            onClick={handlePrint}
+            className="font-anton tracking-widest uppercase text-sm px-5 py-2 rounded-xl border transition-all hover:scale-[1.03]"
+            style={{
+              borderColor: `color-mix(in srgb, var(--color-lisek-orange) 50%, transparent)`,
+              background: `color-mix(in srgb, var(--color-lisek-orange) 10%, transparent)`,
+              color: `var(--color-lisek-orange)`,
+            }}
+          >
+            Download PDF ↓
+          </button>
+        </div>
       </div>
 
       {/* CV body */}
@@ -533,6 +715,14 @@ export default function CVPage({ onClose }: Props) {
                   </div>
                 ))}
               </div>
+            </section>
+
+            {/* Outside Work */}
+            <section>
+              <SectionHeading>Outside Work</SectionHeading>
+              <p className="font-righteous text-sm leading-relaxed" style={{ color: `var(--color-lisek-light)` }}>
+                After hours he builds his own projects — currently running CreativeShape and developing more side-projects. Member of the PJATK{"{AI}"} science club; shares knowledge about AI tooling, Agentic Repos, and LLMs. Regularly organises informal workshops for university friends. Reads psychology, self-improvement, and productivity. To reset: gym, pool, kayaking.
+              </p>
             </section>
 
             {/* Other */}
